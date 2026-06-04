@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050008" />
+    <title>Naz // Connection Re-established</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="fallback-sky" aria-hidden="true"></canvas>
+    <div id="three-sky" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <section class="decrypt-screen" id="decrypt-screen" aria-label="Deşifre kontrolü">
+      <div class="terminal-shell" id="terminal-shell">
+        <div class="terminal-topbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line">[SYSTEM]: Core_Relationship_Protocol interrupted.</p>
+          <p class="terminal-line">[ERROR]: Codex_Mismatch_Detected.</p>
+          <p class="terminal-line">[STATUS]: Waiting for Naz's bypass code...</p>
+          <div class="cursor-row" aria-hidden="true">
+            <span>&gt;</span>
+            <span class="terminal-cursor"></span>
+          </div>
+
+          <form class="code-form" id="code-form">
+            <label for="bypass-code">Sevgili olduğumuz gün</label>
+            <div class="input-row">
+              <input id="bypass-code" name="bypass-code" autocomplete="off" inputmode="text" placeholder="bypass code" />
+              <button type="submit">RUN</button>
+            </div>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+      <div class="success-burst" id="success-burst" aria-hidden="true"></div>
+    </section>
+
+    <main class="site-shell" id="main-content" aria-live="polite">
+      <section class="hero-section" id="letter">
+        <div class="hero-copy">
+          <div class="status-strip">
+            <span>[SUCCESS]</span>
+            <span>Connection re-established</span>
+            <span>Welcome, Naz</span>
+          </div>
+          <p class="eyebrow">Codex Manifestosu</p>
+          <h1>Naz, bütün yollarım sana çıkıyor.</h1>
+          <article class="manifesto-panel" aria-label="Codex manifestosu">
+            <div class="manifesto-header">
+              <span>CORE_LETTER.log</span>
+              <span id="typing-status">decrypting...</span>
+            </div>
+            <div class="manifesto-text" id="manifesto-text"></div>
+          </article>
+        </div>
+
+        <aside class="memory-rail" aria-label="Anı fotoğrafları">
+          <figure class="memory-frame wide">
+            <img src="assets/IMG_8116.jpeg" alt="Naz ile ortak anı kolajı" />
+          </figure>
+          <figure class="memory-frame">
+            <img src="assets/IMG_8119.jpeg" alt="Birlikte çekilmiş loş fotoğraf" />
+          </figure>
+          <figure class="memory-frame tall">
+            <img src="assets/IMG_8118.jpeg" alt="Naz için hazırlanmış özel hediye" />
+          </figure>
+        </aside>
+      </section>
+
+      <section class="capsule-section" id="time-capsules">
+        <div class="section-heading">
+          <p class="eyebrow">Ömürlük Hediye</p>
+          <h2>Gelecek Matrisi</h2>
+        </div>
+
+        <div class="capsule-grid">
+          <article class="capsule-card unlocked" data-capsule="today">
+            <div class="capsule-lock">OPEN</div>
+            <h3>Bugünün Özrü</h3>
+            <p>Bu kayıt açık: özür, sevgi ve seçilmiş anılar aynı yerde.</p>
+            <button class="capsule-action" data-open-gallery type="button">Kapsülü Aç</button>
+          </article>
+
+          <article class="capsule-card locked" id="june-capsule">
+            <div class="capsule-lock">LOCKED</div>
+            <h3>30 Haziran Kaydı</h3>
+            <p class="countdown" id="countdown">Hesaplanıyor...</p>
+            <div class="secret-letter" id="secret-letter" hidden>
+              <p>evet seni hala çok seviyor ve istiyorum bu değil bu ay bir ömür 30 haziran hep böyle olacak</p>
+            </div>
+          </article>
+
+          <article class="capsule-card locked">
+            <div class="capsule-lock">SEALED</div>
+            <h3>Gelecekteki Biz</h3>
+            <p>Henüz tarihi yazılmamış bir anı. Şimdilik sistemde saklı duruyor.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery-panel" hidden>
+        <div class="gallery-copy">
+          <p class="eyebrow">Recovered Memories</p>
+          <h2>Bugüne kadar favori karelerimiz</h2>
+          <p>
+            Naz, bu kapsül sadece bir galeri değil; kırdığım yerleri onarma niyetimin,
+            seni hala ilk günkü gibi seçtiğimin küçük bir kaydı.
+          </p>
+        </div>
+
+        <div class="gallery-stage">
+          <button class="gallery-nav" id="prev-photo" type="button" aria-label="Önceki fotoğraf">&lt;</button>
+          <figure class="gallery-frame">
+            <img id="active-photo" src="assets/IMG_8116.jpeg" alt="Seçili anı fotoğrafı" />
+            <figcaption id="active-caption">Bizim küçük şehir kayıtlarımız.</figcaption>
+          </figure>
+          <button class="gallery-nav" id="next-photo" type="button" aria-label="Sonraki fotoğraf">&gt;</button>
+        </div>
+
+        <div class="thumb-row" id="thumb-row" aria-label="Fotoğraf seçimi"></div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
