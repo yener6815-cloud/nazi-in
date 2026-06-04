@@ -1,4 +1,4 @@
-const PASSWORD = "30 şubat";
+const PASSWORD = "30 ocak";
 const UNLOCK_DATE = new Date("2026-06-30T00:00:00+03:00");
 
 const manifestoParagraphs = [
